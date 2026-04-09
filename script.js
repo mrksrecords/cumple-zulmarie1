@@ -18,16 +18,16 @@ function crearCorazon() {
 setInterval(crearCorazon, 300);
 
 
-// 🐱 BOTÓN HELLO KITTY
+// 🐱 BOTÓN HELLO KITTY (IMAGEN REAL)
 document.getElementById("boton").addEventListener("click", () => {
   for (let i = 0; i < 25; i++) {
     let kitty = document.createElement("div");
 
-    kitty.innerHTML = "🐱🎀";
-    kitty.classList.add("kitty");
+    // 🔥 AQUÍ USAMOS LA IMAGEN
+    kitty.innerHTML = '<img src="kitty.png" style="width:50px;">';
 
+    kitty.classList.add("kitty");
     kitty.style.left = Math.random() * 100 + "vw";
-    kitty.style.fontSize = (Math.random() * 20 + 20) + "px";
 
     document.body.appendChild(kitty);
 
