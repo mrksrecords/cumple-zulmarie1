@@ -18,7 +18,7 @@ function crearCorazon() {
 setInterval(crearCorazon, 300);
 
 
-// 🐱 BOTÓN HELLO KITTY (IMAGEN REAL)
+//  BOTÓN HELLO KITTY (IMAGEN REAL)
 document.getElementById("boton").addEventListener("click", () => {
   for (let i = 0; i < 25; i++) {
     let kitty = document.createElement("div");
@@ -48,6 +48,6 @@ botonMusica.addEventListener("click", () => {
     botonMusica.innerText = "⏸️ Pausar sorpresa";
   } else {
     audio.pause();
-    botonMusica.innerText = "🎁 Sorpresa 🎁";
+    botonMusica.innerText = " Sorpresa ";
   }
 });
