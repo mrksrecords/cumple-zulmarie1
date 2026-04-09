@@ -1,11 +1,12 @@
-// CORAZONES AL ENTRAR
+// 💖 CORAZONES AUTOMÁTICOS
 function crearCorazon() {
   const corazon = document.createElement("div");
   corazon.innerHTML = "💖";
   corazon.classList.add("corazon");
 
   corazon.style.left = Math.random() * 100 + "vw";
-  corazon.style.fontSize = Math.random() * 20 + 10 + "px";
+  corazon.style.fontSize = (Math.random() * 20 + 10) + "px";
+  corazon.style.animationDuration = (Math.random() * 3 + 2) + "s";
 
   document.body.appendChild(corazon);
 
@@ -17,9 +18,9 @@ function crearCorazon() {
 setInterval(crearCorazon, 300);
 
 
-// BOTÓN GLOBOS
+// 🎈 GLOBOS AL PRESIONAR
 document.getElementById("boton").addEventListener("click", () => {
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < 25; i++) {
     let globo = document.createElement("div");
     globo.classList.add("globo");
 
