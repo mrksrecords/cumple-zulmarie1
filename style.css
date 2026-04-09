@@ -5,79 +5,85 @@ body {
   overflow-x: hidden;
 }
 
-/* CONTENEDOR */
+/* CONTENEDOR CENTRADO */
 .container {
   text-align: center;
   padding: 20px;
+  max-width: 500px;
+  margin: auto;
+  background: #f7cfcf;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
-/* TITULO CON BRILLO */
+/* TITULO */
 #titulo {
-  font-size: 3em;
+  font-size: 2em;
   color: black;
   animation: brillo 2s infinite alternate, flotar 3s infinite;
 }
 
-/* EFECTO BRILLO */
+/* BRILLO */
 @keyframes brillo {
   from { text-shadow: 0 0 5px #ff69b4; }
   to { text-shadow: 0 0 20px #ff1493; }
 }
 
-/* MOVIMIENTO SUAVE */
+/* MOVIMIENTO */
 @keyframes flotar {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-5px); }
   100% { transform: translateY(0px); }
 }
 
-/* FOTO */
+/* FOTO RESPONSIVE 🔥 */
 .foto {
-  width: 300px;
+  width: 95%;
+  max-width: 350px;
   border-radius: 15px;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
-/* MENSAJE */
+/* TEXTO */
 .mensaje {
   color: #ff1493;
-  font-size: 1.2em;
+  font-size: 1em;
+  padding: 0 10px;
   animation: brillo 3s infinite alternate;
 }
 
 /* BOTON */
 button {
   padding: 10px 20px;
-  font-size: 1.2em;
+  font-size: 1em;
   background: pink;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 /* CORAZONES */
 .corazon {
   position: fixed;
-  color: red;
-  animation: caer 5s linear infinite;
+  top: -10px;
+  animation: caer linear infinite;
 }
 
 @keyframes caer {
-  0% { transform: translateY(-10vh); }
-  100% { transform: translateY(100vh); }
+  to { transform: translateY(110vh); }
 }
 
 /* GLOBOS */
 .globo {
   position: fixed;
+  bottom: -60px;
   width: 40px;
   height: 60px;
-  background: red;
   border-radius: 50%;
   animation: subir 5s linear forwards;
 }
 
 @keyframes subir {
-  0% { transform: translateY(100vh); }
-  100% { transform: translateY(-10vh); }
+  to { transform: translateY(-110vh); }
 }
