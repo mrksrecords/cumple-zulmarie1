@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: 'Comic Sans MS', cursive;
+  background: #f5d6d6;
+  overflow-x: hidden;
+}
+
+/* CONTENEDOR */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* TITULO CON BRILLO */
+#titulo {
+  font-size: 3em;
+  color: black;
+  animation: brillo 2s infinite alternate, flotar 3s infinite;
+}
+
+/* EFECTO BRILLO */
+@keyframes brillo {
+  from { text-shadow: 0 0 5px #ff69b4; }
+  to { text-shadow: 0 0 20px #ff1493; }
+}
+
+/* MOVIMIENTO SUAVE */
+@keyframes flotar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+  100% { transform: translateY(0px); }
+}
+
+/* FOTO */
+.foto {
+  width: 300px;
+  border-radius: 15px;
+  margin: 20px 0;
+}
+
+/* MENSAJE */
+.mensaje {
+  color: #ff1493;
+  font-size: 1.2em;
+  animation: brillo 3s infinite alternate;
+}
+
+/* BOTON */
+button {
+  padding: 10px 20px;
+  font-size: 1.2em;
+  background: pink;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* CORAZONES */
+.corazon {
+  position: fixed;
+  color: red;
+  animation: caer 5s linear infinite;
+}
+
+@keyframes caer {
+  0% { transform: translateY(-10vh); }
+  100% { transform: translateY(100vh); }
+}
+
+/* GLOBOS */
+.globo {
+  position: fixed;
+  width: 40px;
+  height: 60px;
+  background: red;
+  border-radius: 50%;
+  animation: subir 5s linear forwards;
+}
+
+@keyframes subir {
+  0% { transform: translateY(100vh); }
+  100% { transform: translateY(-10vh); }
+}
