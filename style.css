@@ -5,7 +5,7 @@ body {
   overflow-x: hidden;
 }
 
-/* CONTENEDOR CENTRADO */
+/* CONTENEDOR */
 .container {
   text-align: center;
   padding: 20px;
@@ -19,24 +19,21 @@ body {
 /* TITULO */
 #titulo {
   font-size: 2em;
-  color: black;
   animation: brillo 2s infinite alternate, flotar 3s infinite;
 }
 
-/* BRILLO */
 @keyframes brillo {
   from { text-shadow: 0 0 5px #ff69b4; }
   to { text-shadow: 0 0 20px #ff1493; }
 }
 
-/* MOVIMIENTO */
 @keyframes flotar {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-5px); }
   100% { transform: translateY(0px); }
 }
 
-/* FOTO RESPONSIVE 🔥 */
+/* FOTO */
 .foto {
   width: 95%;
   max-width: 350px;
@@ -52,7 +49,7 @@ body {
   animation: brillo 3s infinite alternate;
 }
 
-/* BOTON */
+/* BOTONES */
 button {
   padding: 10px 20px;
   font-size: 1em;
@@ -61,6 +58,11 @@ button {
   border-radius: 10px;
   cursor: pointer;
   margin-top: 10px;
+}
+
+/* BOTÓN SORPRESA */
+#musica {
+  background: #ffb6c1;
 }
 
 /* CORAZONES */
@@ -74,16 +76,15 @@ button {
   to { transform: translateY(110vh); }
 }
 
-/* GLOBOS */
-.globo {
+/* HELLO KITTY SUBIENDO */
+.kitty {
   position: fixed;
-  bottom: -60px;
-  width: 40px;
-  height: 60px;
-  border-radius: 50%;
-  animation: subir 5s linear forwards;
+  bottom: -50px;
+  animation: subirKitty 5s linear forwards;
 }
 
-@keyframes subir {
-  to { transform: translateY(-110vh); }
+@keyframes subirKitty {
+  to {
+    transform: translateY(-110vh);
+  }
 }
