@@ -18,19 +18,36 @@ function crearCorazon() {
 setInterval(crearCorazon, 300);
 
 
-// 🎈 GLOBOS AL PRESIONAR
+// 🐱 BOTÓN HELLO KITTY
 document.getElementById("boton").addEventListener("click", () => {
   for (let i = 0; i < 25; i++) {
-    let globo = document.createElement("div");
-    globo.classList.add("globo");
+    let kitty = document.createElement("div");
 
-    globo.style.left = Math.random() * 100 + "vw";
-    globo.style.background = `hsl(${Math.random()*360}, 70%, 60%)`;
+    kitty.innerHTML = "🐱🎀";
+    kitty.classList.add("kitty");
 
-    document.body.appendChild(globo);
+    kitty.style.left = Math.random() * 100 + "vw";
+    kitty.style.fontSize = (Math.random() * 20 + 20) + "px";
+
+    document.body.appendChild(kitty);
 
     setTimeout(() => {
-      globo.remove();
+      kitty.remove();
     }, 5000);
+  }
+});
+
+
+// 🎁 BOTÓN SORPRESA (AUDIO)
+const botonMusica = document.getElementById("musica");
+const audio = document.getElementById("audio");
+
+botonMusica.addEventListener("click", () => {
+  if (audio.paused) {
+    audio.play();
+    botonMusica.innerText = "⏸️ Pausar sorpresa";
+  } else {
+    audio.pause();
+    botonMusica.innerText = "🎁 Sorpresa 🎁";
   }
 });
